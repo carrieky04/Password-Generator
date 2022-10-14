@@ -23,9 +23,10 @@ var password = "";
 var getLength = "";
 
   
-document.querySelector("#generate").addEventListener("click", generatePassword);
+
 function generatePassword() {
-  var getLength = prompt ("Password must be between 8-128 characters.");
+  var getLength = prompt ("Choose between 8-128 characters.");
+    
   var useUpperCase = confirm ("Would you like upper case letters?");
     if (useUpperCase === true) {
       password += upperCase;
@@ -42,16 +43,16 @@ function generatePassword() {
     if (useSpecialChar === true) {
       password += specialChar;
     }
-    // return (password,getLength);
+   
   var passwordText="";
     for (var i = 0; i < getLength; i++) {
       passwordText += password[Math.floor(Math.random() * password.length)];
-      console.log(Math.floor(Math.random() * password.length));
-      console.log(passwordText);
     }
       return passwordText;
   } 
-  generatePassword();
+
+
+  
 
 
 
