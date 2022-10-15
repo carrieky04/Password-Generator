@@ -46,7 +46,7 @@ function generatePassword() {
       password += specialChar;
     }
 
-/* Character array iteration with Math.random function */
+/* Character array iteration with Math.random function to create value of passwordText variable */
   var passwordText="";
     for (var i = 0; i < getLength; i++) {
       passwordText += password[Math.floor(Math.random() * password.length)];
