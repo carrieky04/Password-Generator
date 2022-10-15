@@ -17,7 +17,7 @@ No installation required.
 Please follow this link for the [password generator](https://carrieky04.github.io/Password-Generator/)
 
 
-![screenshot](assets/images/screenshot.png)
+![screenshot](https://github.com/carrieky04/Password-Generator/blob/main/assets/images/screenshot.png?raw=true)
 
 ## Credits
 
