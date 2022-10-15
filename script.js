@@ -14,7 +14,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 ///////////////////////// DO NOT CHANGE ABOVE HERE /////////////////////////
 
-
+/* Variables set with their character values */
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var num = "1234567890"
@@ -23,10 +23,12 @@ var password = "";
 var getLength = "";
 
   
-
+/* Generate password function with each character criteria added to password variable */
 function generatePassword() {
   var getLength = prompt ("Choose between 8-128 characters.");
-    
+    if (getLength < 8 || getLength > 128) {
+     getLength = prompt("Please try again. Must be between 8-128 characters long");
+    }
   var useUpperCase = confirm ("Would you like upper case letters?");
     if (useUpperCase === true) {
       password += upperCase;
@@ -43,7 +45,8 @@ function generatePassword() {
     if (useSpecialChar === true) {
       password += specialChar;
     }
-   
+
+/* Character array iteration with Math.random function */
   var passwordText="";
     for (var i = 0; i < getLength; i++) {
       passwordText += password[Math.floor(Math.random() * password.length)];
